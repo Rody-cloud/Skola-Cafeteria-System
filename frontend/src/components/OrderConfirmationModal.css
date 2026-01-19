@@ -1,0 +1,180 @@
+.qr-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(15, 23, 42, 0.8);
+    backdrop-filter: blur(8px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+    padding: 20px;
+}
+
+.qr-card {
+    background: var(--white);
+    width: 100%;
+    max-width: 380px;
+    border-radius: 24px;
+    padding: 24px 20px;
+    position: relative;
+    text-align: center;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    max-height: 90vh;
+    /* Ensure it fits on screen */
+    overflow-y: auto;
+    /* Scroll if still too tall */
+}
+
+.qr-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: var(--gray-100);
+    border: none;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--gray-500);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.qr-close:hover {
+    background: var(--gray-200);
+    color: var(--gray-900);
+}
+
+.qr-icon-circle {
+    width: 48px;
+    height: 48px;
+    background: var(--emerald-soft);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 10px;
+}
+
+.success-icon {
+    font-size: 24px;
+    color: var(--emerald-primary);
+}
+
+.qr-header h2 {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: var(--gray-900);
+    margin-bottom: 5px;
+}
+
+.qr-header p {
+    font-size: 0.85rem;
+    color: var(--gray-600);
+    line-height: 1.4;
+    margin-bottom: 15px;
+}
+
+.qr-display-section {
+    background: var(--gray-50);
+    border-radius: 20px;
+    padding: 20px;
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.qr-wrapper {
+    position: relative;
+    padding: 10px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.qr-corner-border {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border: 2px solid var(--emerald-primary);
+}
+
+/* ... existing corners omitted for brevity in thought, but must be careful with replace ... */
+/* To avoid messing up complex selectors, I'll just target specific blocks or replace individual ones. */
+/* Wait, sticking to smaller chunks is safer. I'll replace chunks. */
+
+.summary-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+}
+
+.summary-row span:first-child {
+    color: var(--gray-500);
+}
+
+.summary-row .total-amount {
+    font-weight: 800;
+    color: var(--gray-900);
+    font-size: 1.1rem;
+}
+
+.summary-row .cash-label {
+    background: #fef3c7;
+    color: #92400e;
+    padding: 2px 10px;
+    border-radius: 50px;
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+.qr-instructions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 16px;
+    background: #fffbeb;
+    border: 1px solid #fef3c7;
+    border-radius: 16px;
+    margin-bottom: 25px;
+    text-align: left;
+}
+
+.warn-icon {
+    color: #f59e0b;
+    font-size: 1.2rem;
+    flex-shrink: 0;
+}
+
+.qr-instructions p {
+    font-size: 0.85rem;
+    color: #92400e;
+    line-height: 1.4;
+    font-weight: 500;
+}
+
+.qr-done-btn {
+    width: 100%;
+    padding: 16px;
+    background: var(--gray-900);
+    color: white;
+    border: none;
+    border-radius: 16px;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.qr-done-btn:hover {
+    background: black;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}

@@ -1,0 +1,6 @@
+/* Clean App.css to allow full width/height */
+#root {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}

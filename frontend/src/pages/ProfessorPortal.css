@@ -1,0 +1,163 @@
+.prof-portal {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    min-height: 100vh;
+}
+
+.prof-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+    background: var(--white);
+    padding: 24px 32px;
+    border-radius: 24px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.03);
+    border: 1px solid var(--gray-100);
+}
+
+.prof-header h1 {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--gray-900);
+}
+
+.prof-header p {
+    color: var(--emerald-primary);
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+
+.prof-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 30px;
+}
+
+.prof-card {
+    background: var(--white);
+    border-radius: 30px;
+    padding: 35px;
+    border: 1px solid var(--gray-100);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.04);
+}
+
+.prof-card h2 {
+    font-size: 1.4rem;
+    font-weight: 800;
+    margin-bottom: 25px;
+    color: var(--gray-900);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.prof-card h2 svg {
+    color: var(--emerald-primary);
+}
+
+/* PRIORITY ORDERS */
+.priority-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.priority-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: var(--gray-50);
+    border-radius: 20px;
+    border: 1px solid transparent;
+    transition: all 0.2s ease;
+}
+
+.priority-item:hover {
+    background: var(--white);
+    border-color: var(--emerald-soft);
+    transform: translateX(5px);
+}
+
+.item-main {
+    display: flex;
+    flex-direction: column;
+}
+
+.item-title {
+    font-weight: 700;
+    color: var(--gray-900);
+}
+
+.item-meta {
+    font-size: 0.8rem;
+    color: var(--gray-400);
+}
+
+.badge-priority {
+    background: #fee2e2;
+    color: #991b1b;
+    padding: 4px 12px;
+    border-radius: 50px;
+    font-size: 0.7rem;
+    font-weight: 800;
+}
+
+/* BILLING CARD */
+.billing-details {
+    margin-top: 20px;
+}
+
+.balance-box {
+    background: var(--gray-900);
+    color: white;
+    padding: 30px;
+    border-radius: 20px;
+    margin-bottom: 25px;
+}
+
+.balance-box label {
+    font-size: 0.8rem;
+    color: var(--gray-400);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.balance-amount {
+    font-size: 2.2rem;
+    font-weight: 800;
+    margin-top: 5px;
+}
+
+.action-links {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.prof-action-btn {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 15px;
+    background: var(--gray-50);
+    border-radius: 12px;
+    color: var(--gray-700);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+}
+
+.prof-action-btn:hover {
+    background: var(--emerald-soft);
+    color: var(--emerald-primary);
+}
+
+@media (max-width: 992px) {
+    .prof-grid {
+        grid-template-columns: 1fr;
+    }
+}

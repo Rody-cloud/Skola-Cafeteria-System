@@ -1,0 +1,12 @@
+const fetch = require('node-fetch'); // You might need to install this or use built-in fetch if node > 18
+
+// Generate a random email to avoid collision
+const randomId = Math.floor(Math.random() * 10000);
+const email = `testuser${randomId}@stu.topkapi.edu.tr`;
+// Need to add this email to allowed list first or pick one that bypasses? 
+// Actually, the system requires the email to be in AllowedEmail table.
+// This might be tricky if I don't know a valid allowed email that isn't taken.
+// Alternatively, I can check the code to see if there's a bypass or just trust the restart theory.
+
+// Let's look at seed_allowed_emails.js to find a valid email pattern or see if I can insert one.
+// Better yet, just explain the restart usage since I know `node server.js` doesn't reload.
