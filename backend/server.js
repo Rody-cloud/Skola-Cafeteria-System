@@ -36,14 +36,20 @@ app.get('/', (req, res) => {
     res.send('Cafeteria System API is running');
 });
 
-// Sync Database and Start Server
-sequelize.sync({ force: false }) // Set force: true to drop tables on restart
+// Sync Database
+sequelize.sync({ force: false })
     .then(() => {
         console.log('Database synced successfully.');
-        app.listen(PORT, () => {
-            console.log(`Server is running on port ${PORT}`);
-        });
     })
     .catch((err) => {
         console.error('Unable to connect to the database:', err);
     });
+
+// Start Server locally if not running as a function
+if (process.env.NODE_ENV !== 'production' || !process.env.NETLIFY) {
+    app.listen(PORT, () => {
+        console.log(`Server is running on port ${PORT}`);
+    });
+}
+
+module.exports = app;
